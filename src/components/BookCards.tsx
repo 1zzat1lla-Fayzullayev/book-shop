@@ -2,7 +2,7 @@ import "../css/bookcards.css";
 function BookCards() {
   return (
     <div>
-      <div className="myCard">
+      {/* <div className="myCard">
         <div className="innerCard">
           <div className="frontSide">
             <p className="title">FRONT SIDE</p>
@@ -13,7 +13,7 @@ function BookCards() {
             <p>Leave Me</p>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
