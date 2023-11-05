@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-.create_book_div{
-    margin-top: 30px;
+.create_book_div {
+  margin-top: 30px;
 }
 
 .create_book_div .create_book_row_div {
@@ -14,38 +14,37 @@
   justify-content: space-between !important;
 }
 
-.create_book_div .row_text_div .col_text_div{
+.create_book_div .row_text_div .col_text_div {
   font-size: 18px;
-  
 }
 
-.elements_div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.elements_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.create_book_row_div .elements_div input{
-    padding: 6px 16px;
-    border-radius: 4px;
-    outline: none;
-    width: 300px;
-    border: none;
+.create_book_row_div .elements_div input {
+  padding: 6px 16px;
+  border-radius: 4px;
+  outline: none;
+  width: 300px;
+  border: none;
 }
 
-.create_book_row_div .elements_div button{
+.create_book_row_div .elements_div button {
   transition: 0.2s ease all;
 }
 
-.create_book_row_div .elements_div button:active{
+.create_book_row_div .elements_div button:active {
   transform: translateY(-0.5rem) !important;
 }
 
 @media (max-width: 768px) {
-  .create_book_row_div .elements_div input{
+  .create_book_row_div .elements_div input {
     width: 240px;
   }
-  .create_book_row_div .elements_div button{
+  .create_book_row_div .elements_div button {
     width: 140px;
     font-size: 9px;
   }
