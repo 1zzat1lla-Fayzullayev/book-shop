@@ -14,6 +14,11 @@
   justify-content: space-between !important;
 }
 
+.create_book_div .row_text_div .col_text_div{
+  font-size: 18px;
+  
+}
+
 .elements_div{
     display: flex;
     justify-content: center;
@@ -29,9 +34,19 @@
 }
 
 .create_book_row_div .elements_div button{
-  transition: 0.5s ease all;
+  transition: 0.2s ease all;
 }
 
 .create_book_row_div .elements_div button:active{
   transform: translateY(-0.5rem) !important;
+}
+
+@media (max-width: 768px) {
+  .create_book_row_div .elements_div input{
+    width: 240px;
+  }
+  .create_book_row_div .elements_div button{
+    width: 140px;
+    font-size: 9px;
+  }
 }

@@ -21,6 +21,13 @@ function MenuSearch(): JSX.Element {
             </div>
           </div>
         </div>
+        <div className="row row_text_div">
+          <div className="col-md-12 col_text_div">
+            <div>
+              <p>Your task today</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
