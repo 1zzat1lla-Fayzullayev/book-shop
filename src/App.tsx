@@ -1,13 +1,17 @@
-import BookCardsMenu from "./components/BookCardsMenu";
-import CreateBook from "./components/CreateBook";
-import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import './css/style.scss' // scss
+import Home from "./routes/Home";
 
 function App(): JSX.Element {
   return (
     <div>
-      <Navbar />
-      <CreateBook />
-      <BookCardsMenu />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
+
     </div>
   );
 }

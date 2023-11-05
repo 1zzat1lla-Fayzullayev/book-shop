@@ -1,4 +1,3 @@
-import "../css/bookcards.css";
 function BookCards() {
   return (
     <div>
