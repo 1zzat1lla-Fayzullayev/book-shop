@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.create_book_div .create_book_row_div {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.create_book_row_div .elements_div input{
+    padding: 5px 16px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+}
