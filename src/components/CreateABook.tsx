@@ -1,23 +1,28 @@
 import "../css/createabook.css";
-import { ChangeEvent, useState } from 'react'
+import { useState } from 'react'
 import { bookData } from "../interfaces";
-import { dataArray } from "../constands";
 function CreateABook() {
-  const [data, setData] = useState<string>('')
-  // const [array, SetArray] = useState<bookData[]>(dataArray)
+  const [data, setData] = useState<bookData>({
+    title: "",
+    author: '',
+    cover: '',
+    published: '',
+    pages: ''
+  })
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    setData(e.target.value);
-  };
-  const handeSubmit = (): void => {
-    // e.preventDefault();
-    // const newdata = { data: }
-    console.log(data);
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    let value: string = e.target.value
+    let name: string = e.target.name
+    setData({ ...data, [name]: value })
+  }
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    localStorage.setItem('books', JSON.stringify(data))
   }
 
   return (
     <div>
-      <form onSubmit={handeSubmit}>
+      <form onSubmit={handleSubmit}>
         <div className="CreateBOOK">
           <label htmlFor="title">Title</label>
           <input
@@ -26,7 +31,7 @@ function CreateABook() {
             id="title"
             required
             placeholder="Enter your author"
-            value={data}
+            value={data?.title || ''}
             onChange={handleChange}
           />
           <label htmlFor="author">Author</label>
@@ -36,7 +41,7 @@ function CreateABook() {
             id="author"
             required
             placeholder="Enter your author"
-            value={data}
+            value={data?.author || ''}
             onChange={handleChange}
           />
           <label htmlFor="cover">Cover</label>
@@ -46,7 +51,7 @@ function CreateABook() {
             id="cover"
             required
             placeholder="Enter your cover"
-            value={data}
+            value={data?.cover || ''}
             onChange={handleChange}
           />
           <label htmlFor="published">Published</label>
@@ -56,7 +61,7 @@ function CreateABook() {
             id="published"
             required
             // placeholder="Enter your published"
-            value={data}
+            value={data?.published || ''}
             onChange={handleChange}
           />
           <label htmlFor="pages">Pages</label>
@@ -66,12 +71,12 @@ function CreateABook() {
             id="pages"
             required
             placeholder="Enter your pages"
-            value={data}
+            value={data?.pages || ''}
             onChange={handleChange}
           />
           <div className="buttons_Div">
-            <button className="close">Close</button>
-            <button className="submit">Submit</button>
+            <div className="close button" >Close</div>
+            <div className="submit button" type="submit">Submit</div>
           </div>
         </div>
       </form>
