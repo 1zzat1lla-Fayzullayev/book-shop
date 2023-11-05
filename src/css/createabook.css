@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.CreateBOOK {
+  width: 30%;
+  border: 1px solid gray;
+  margin: auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.CreateBOOK input {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gray;
+  outline: none;
+}
+
+.CreateBOOK .buttons_Div button {
+  width: 45%;
+  border-radius: 4px;
+  border: 1px solid #6200ee;
+  padding: 6px 8px;
+  margin-top: 10px;
+}

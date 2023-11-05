@@ -1,4 +1,5 @@
 import BookCards from "../components/BookCards";
+import CreateABook from "../components/CreateABook";
 import CreateBook from "../components/CreateBook";
 import Navbar from "../components/Navbar";
 function Home() {
@@ -9,6 +10,7 @@ function Home() {
             <div className="book-card-menu">
                 <BookCards />
             </div>
+            <CreateABook/>
         </div>
     )
 }
