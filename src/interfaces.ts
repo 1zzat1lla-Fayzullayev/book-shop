@@ -3,5 +3,5 @@ export interface bookData{
     author: string,
     cover: string,
     published: string,
-    pages: string
+    pages: number
 }
