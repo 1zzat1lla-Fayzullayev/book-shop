@@ -14,8 +14,20 @@
   justify-content: space-between !important;
 }
 
+.create_book_row_div .h1_div .h1 {
+  color: white;
+}
+
+.create_book_row_div .h1_div span{
+  color: #6200EE;
+}
+
 .create_book_div .row_text_div .col_text_div {
   font-size: 18px;
+}
+
+.col_text_div p{
+  color: white;
 }
 
 .elements_div {
