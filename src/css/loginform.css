@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.form__container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.664);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: black;
+  margin: auto;
+  top: 10%;
+  border-radius: 20px;
+  left: 0;
+  bottom: 5%;
+  right: 0;
+}
+
+input,
+textarea,
+button {
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  padding: 6px 16px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  border: 1px solid #6200ee;
+  outline: none;
+}
+
+.form__container {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form {
+  width: 100%;
+  padding: 32px;
+}
+
+.form__group {
+  margin-top: 10px;
+}
+
+.form__group:first-child {
+  margin-top: 0;
+}
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form__input,
+.form__text {
+  width: 100%;
+}
+
+.form__button {
+  background-color: #6200ee;
+  color: white;
+  width: 100%;
+  display: block;
+  margin-top: 5px;
+  transition: 0.2s ease all;
+}
+.form__button:active {
+  transform: translateY(-0.5rem) !important;
+}

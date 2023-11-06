@@ -46,6 +46,7 @@
 
 .create_book_row_div .elements_div button {
   transition: 0.2s ease all;
+  background-color: #6200EE;
 }
 
 .create_book_row_div .elements_div button:active {
