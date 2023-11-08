@@ -5,25 +5,29 @@ import { ISign } from "../interfaces/signin";
 function Signin(): JSX.Element {
   const [user, setUser] = useState({});
   const navigate = useNavigate();
+
+  // ISign interface
   const [data, setData] = useState<ISign>({
     username: "",
     email: "",
     password: 0,
   });
 
+  // input change
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setUser({ ...user, [e.target.value]: e.target.value });
   };
 
-  const handleSubmit = (e: any): void => {
+  // submit
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     try {
-      localStorage.setItem("user", JSON.stringify(user));
+      localStorage.setItem("user", JSON.stringify(data));
     } catch (error) {
       console.error("Failed to store user in local storage", error);
       return;
     }
-    if (!user) {
+    if (!data.username || !data.email || !data.password) {
       console.error("User does not exist");
       return;
     }
@@ -35,9 +39,9 @@ function Signin(): JSX.Element {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-10 col-md-8 col-lg-5">
-              <h2 className="text-center text-light mb-4">SIGN UP</h2>
+              <h2 className="text-center text-light mb-4">SIGN IN</h2>
               <div className="form-box">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={(e) => handleSubmit(e)}>
                   <input
                     type="text"
                     name="username"
