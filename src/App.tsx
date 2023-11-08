@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import './css/style.scss' // scss
 import Home from "./routes/Home";
+import Signin from "./pages/Signin";
 
 function App(): JSX.Element {
   return (
@@ -9,6 +10,7 @@ function App(): JSX.Element {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/signin" element={<Signin/>}/>
         </Routes>
       </BrowserRouter>
 
