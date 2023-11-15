@@ -18,15 +18,15 @@
   color: white;
 }
 
-.create_book_row_div .h1_div span{
-  color: #6200EE;
+.create_book_row_div .h1_div span {
+  color: #6200ee;
 }
 
 .create_book_div .row_text_div .col_text_div {
   font-size: 18px;
 }
 
-.col_text_div p{
+.col_text_div p {
   color: white;
 }
 
@@ -46,7 +46,7 @@
 
 .create_book_row_div .elements_div button {
   transition: 0.2s ease all;
-  background-color: #6200EE;
+  background-color: #6200ee;
 }
 
 .create_book_row_div .elements_div button:active {
@@ -58,7 +58,29 @@
     width: 240px;
   }
   .create_book_row_div .elements_div button {
-    width: 140px;
-    font-size: 9px;
+    width: 150px;
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+@media (max-width: 1140px) {
+  .create_book_row_div .elements_div input {
+    width: 240px;
+  }
+  .create_book_row_div .elements_div button {
+    width: 150px;
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 960px) {
+  .create_book_row_div .elements_div input {
+    width: 240px;
+  }
+  .create_book_row_div .elements_div button {
+    width: 150px;
+    font-size: 10px;
+    padding: 8px;
   }
 }

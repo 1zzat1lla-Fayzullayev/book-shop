@@ -5,7 +5,6 @@ import { useState } from "react";
 import { bookData } from "../interfaces";
 import "../css/createabook.css";
 
-
 function MenuSearch(): JSX.Element {
   // Kitob qoshish divni hide \ show qilish
   const [show, setShow] = useState<boolean>(false);
@@ -31,13 +30,14 @@ function MenuSearch(): JSX.Element {
   // Formga yani buttonlarda malumotlani yuborish
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const localArr: [] = [];
     localStorage.setItem("books", JSON.stringify(data));
+    // localArr.push(JSON.parse(data)); 
     if (!data) {
       return;
     }
+    // setData("");
   };
-
-
 
   // Va TSX yani html qismi
   return (
